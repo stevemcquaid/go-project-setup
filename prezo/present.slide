@@ -15,13 +15,16 @@ https://github.com/stevemcquaid
 : This is meant to be a workshop so lets bust out the laptops
 : Lets create 4 groups. And to mix everyone up, lets count off: 1,2,3,4
     git clone https://github.com/stevemcquaid/go-project-setup.git
+    cd go-project-setup
+    make setup
+    make help
 .iframe https://github.com/stevemcquaid/go-project-setup _ 900
 .link https://godoc.org/golang.org/x/tools/present
 
 * Hello World
 : Lets write our first program
-.play -edit ../cmd/helloworld/helloworld.go
+.play -edit ../pkg/helloworld/helloworld.go
 
 * Webserver
 : Go has built-ins which make writing a webserver easy
-.play -edit ../cmd/simpleserver/simpleserver.go
+.play -edit ../pkg/simpleserver/simpleserver.go

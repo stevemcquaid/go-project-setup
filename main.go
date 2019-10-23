@@ -1,9 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"github.com/stevemcquaid/goprojectsetup/pkg/logger"
+	"github.com/stevemcquaid/goprojectsetup/pkg/simpleserver"
 )
 
 func main() {
-	fmt.Println("Hello World")
+	myLogger := logger.NewLogService()
+	log := myLogger.GetLogger()
+	log.Debugf("Starting...")
+
+	simpleserver.Run()
 }

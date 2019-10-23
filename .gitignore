@@ -1,4 +1,34 @@
+# System Trash
 .DS_Store
-.idea/*
-.idea/
+
+# Cron jobs
+queue/tasks.cron
+
+# Backup files
+*.bak
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+gosaas-dev
+*.test
 bin/*
+
+# Output of the go coverage tool
+*.out
+coverage.txt
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+
+# IDE exclude
+.idea/
+.vscode/
+
+# Golang Vendor directory
+# vendor/*
+
