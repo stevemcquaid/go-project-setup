@@ -5,25 +5,26 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
+
+	configuration "github.com/stevemcquaid/goprojectsetup/config"
 )
 
 type LogService struct {
 	log *logrus.Logger
 }
 
-// Middleware is a struct that has a ServeHTTP method
-func NewLogService() *LogService {
+func NewLogService(configuration *configuration.Configuration) *LogService {
 	log := logrus.New()
-	log.Level = logrus.DebugLevel
-	log.Formatter = &logrus.JSONFormatter{}
+	log.Formatter = &logrus.TextFormatter{}
+
+	logrusLevel, err := configuration.Logger.GetLogLevel()
+	if err != nil {
+		log.Level = logrus.WarnLevel
+	} else {
+		log.Level = logrusLevel
+	}
 
 	return &LogService{log}
-}
-
-func NewTestLogService() *LogService {
-	ls := NewLogService()
-	ls.GetLogger().Level = logrus.DebugLevel
-	return ls
 }
 
 func (l *LogService) GetLogger() *logrus.Logger {
@@ -31,6 +32,7 @@ func (l *LogService) GetLogger() *logrus.Logger {
 }
 
 // Satisfy the middleware interface
+// Middleware is a struct that has a ServeHTTP method
 func (l *LogService) ServeHTTP(w http.ResponseWriter, r *http.Request, next http.Handler) {
 	// log.Infof("Here in the logHandler")
 	start := time.Now()
@@ -46,4 +48,10 @@ func (l *LogService) Handler(next http.Handler) http.Handler {
 		l.log.Infof("%s | %s | %s | %s", time.Since(start), r.Method, r.URL.Path, r.RequestURI)
 	},
 	)
+}
+
+func NewTestLogService(configuration *configuration.Configuration) *LogService {
+	ls := NewLogService(configuration)
+	ls.GetLogger().Level = logrus.DebugLevel
+	return ls
 }

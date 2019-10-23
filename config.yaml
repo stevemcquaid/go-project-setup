@@ -1,0 +1,5 @@
+server:
+  port: 5000
+  addr: "localhost"
+logger:
+  level: debug

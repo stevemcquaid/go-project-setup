@@ -1,4 +1,4 @@
-Present Lightning Talk
+Hello World Workshop
 Golang Indianapolis Oct 23, 2019
 
 Steve McQuaid
@@ -21,10 +21,50 @@ https://github.com/stevemcquaid
 .iframe https://github.com/stevemcquaid/go-project-setup _ 900
 .link https://godoc.org/golang.org/x/tools/present
 
+* Protip #1 - Use an IDE
+Goland IDE is awesome
+.link https://www.jetbrains.com/go/ https://jetbrains.com/go
+You can generate table-driven tests, implement interfaces, and much more!
+.link https://medium.com/@keperry/5-tips-to-speed-up-golang-development-with-intellij-or-goland-6646110e9c5e Medium Article w/ ProTips™
+
+* Protip #2 - Use a package manager for easy updates
+.link https://gofi.sh One option is GoFish
+    curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash
+    gofish init
+    gofish install go
+    # How to upgrade...
+    gofish upgrade gofish
+    gofish upgrade go
+.caption It's like a cross-platform Homebrew
+.link https://golang.org/doc/install https://golang.org/doc/install
+.caption When in doubt - download the Golang binary
+
 * Hello World
 : Lets write our first program
-.play -edit ../pkg/helloworld/helloworld.go
+.code -edit ../pkg/helloworld/helloworld.go
 
 * Webserver
 : Go has built-ins which make writing a webserver easy
-.play -edit ../pkg/simpleserver/simpleserver.go
+.code -edit ../pkg/simpleserver/simpleserver.go
+
+* Easy Configs
+I like to take advantage of golang's marshalling to make easy config files.
+.code -edit ../config/config.go /type/,/^}/
+.code -edit ../config/logger.go /type/,/^}/
+.code -edit ../config/server.go /type/,/^}/
+
+* Easy Configs
+I also use `github.com/spf13/viper` for path file discovery, but its not necessary.
+Built-in: `ioutil.ReadFile()` works just as well.
+.code -edit ../pkg/config/setup.go /SetupConfig/,/^}/
+
+* Dockerized Webserver
+.play -edit ../Dockerfile
+
+* Logging
+: I like the logrus package
+: This structure is just how I do it.
+.code ../pkg/logger/logger.go /LogService/,/return l.log\n^}/
+* Logging
+.code ../pkg/configurableserver/main.go /myLogger/,/GetLogger/
+
