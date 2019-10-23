@@ -3,9 +3,9 @@ This is a basic project to play around with golang!
 
 # Usage
 * `make help`
-* `make build`
 * `make setup`
 * `make ci`
+* `make run`
 * `make docker-run`
 
 # Structure
