@@ -63,5 +63,8 @@ func (srv *ConfigurableServer) ServeHTTP(w http.ResponseWriter, r *http.Request)
 }
 
 func (srv *ConfigurableServer) HelloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello world \n")
+	log := srv.Logger.GetLogger()
+	_, _ = fmt.Fprintf(w, "Hello world \n")
+
+	log.Debugf("Done with HelloHandler()")
 }

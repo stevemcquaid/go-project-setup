@@ -68,3 +68,29 @@ Built-in: `ioutil.ReadFile()` works just as well.
 * Logging
 .code ../pkg/configurableserver/main.go /myLogger/,/GetLogger/
 
+* A lesson on go's http middleware libs
+Notice how a custom struct is created here.. there is a reason for this
+.code ../pkg/configurableserver/main.go /Get\ configuration/,/StartHTTPServer/
+.caption `main.go`
+
+* A lesson on go's http middleware libs
+In golang's standard library: `net/http`, the main interface is: `http.Handler`
+.code src/http.txt
+Which means in our `simpleserver`, we are highly restricted by the method signature!
+.code ../pkg/simpleserver/simpleserver.go /Run/,/Fprintf/
+.caption pkg/simpleserver/simpleserver.go
+What if we want to share information with that method?
+What if we wanted to use the same logger instance to print something out?
+  ...We'd have to get lucky with scope of the variable.
+
+
+* A Solution!
+One way around this issue is to use a member function to call the struct's fields in order to pass information around
+.code ../pkg/configurableserver/configurableserver.go /ConfigurableServer/,/^}/
+.code ../pkg/configurableserver/configurableserver.go /HelloHandler\(w\ http/,/^}/
+.caption pkg/configurableserver/configurableserver.go
+
+* Now gopher it!
+
+* Questions?
+.image img/rimshot.gif _ 800

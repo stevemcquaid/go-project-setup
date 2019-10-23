@@ -1,7 +1,6 @@
 package configurableserver
 
 import (
-	"context"
 	"sync"
 
 	configuration "github.com/stevemcquaid/goprojectsetup/config"
@@ -19,25 +18,14 @@ func Run() {
 
 	// Configure the logger
 	myLogger := logger.NewLogService(myConfiguration)
-	log := myLogger.GetLogger()
+	_ = myLogger.GetLogger()
 
-	// Create the server so we can pass the logger and configuration to it
+	// Create the custom server so we can pass the logger and configuration to it
 	srv := NewConfigurableServer(myConfiguration, myLogger)
-	// Block while server starts
+	_ = srv.StartHTTPServer()
+
+	// Block while server runs
 	wg := &sync.WaitGroup{}
 	wg.Add(1)
-	log.Debugf("StartHTTPServer()...")
-	http := srv.StartHTTPServer()
-	wg.Wait() // This is blocking
-
-	// We will never get past here!!!
-
-	// Close the server gracefully ("shutdown")
-	// timeout could be given with a proper context
-	// (in real world you shouldn't use TODO()).
-	if err := http.Shutdown(context.TODO()); err != nil {
-		panic(err) // failure/timeout shutting down the server gracefully
-	}
-
-	log.Printf("done. exiting. goodbye. and goodnight.")
+	wg.Wait() // This is the blocking command
 }
