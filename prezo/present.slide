@@ -94,3 +94,71 @@ One way around this issue is to use a member function to call the struct's field
 
 * Questions?
 .image img/rimshot.gif _ 800
+
+* Pick a Challenge
+.image img/gophercises_logo.png _ 500
+.caption Gophercises
+
+.image img/learn_go_with_tests.png _ 400
+.caption Learn Go With Tests
+
+
+* Want to Learn Go? ==> Learn Go With Tests
+.image img/learn_go_with_tests.png _ 400
+- Amazing repo full of challenges to learn the difference aspects of go through tests. Test Driven Learning? (TDD -> TDL)
+
+
+* Want to Build something? Gophercise!
+.image img/learn_go_with_tests.png _ 400
+- Guided exercises to build something cool
+- Free website with full video walkthrus
+- Solutions can be found in public repo branches
+- Jon Calhoun has a number of great paid courses... If interested, post on slack (we might be able to do a group discount)
+
+* Learn Go With Tests:
+.link https://quii.gitbook.io/learn-go-with-tests/ Full gitbook!
+Code: https://github.com/quii/learn-go-with-tests
+.link https://github.com/quii/learn-go-with-tests#go-fundamentals Start here
+.image img/learn_go_with_tests.png _ 150
+
+* Learn Go With Tests Chapters:
+.link https://github.com/quii/learn-go-with-tests/blob/master/install-go.md Install Go
+.link https://github.com/quii/learn-go-with-tests/blob/master/hello-world.md Hello World
+.link https://github.com/quii/learn-go-with-tests/blob/master/integers.md Integers
+.link https://github.com/quii/learn-go-with-tests/blob/master/iteration.md Iteration
+.link https://github.com/quii/learn-go-with-tests/blob/master/arrays-and-slices.md Arrays & Slices
+.link https://github.com/quii/learn-go-with-tests/blob/master/structs-methods-and-interfaces.md Structs, Methods & Interfaces
+.link https://github.com/quii/learn-go-with-tests/blob/master/pointers-and-errors.md Pointers & Errors
+.link https://github.com/quii/learn-go-with-tests/blob/master/maps.md Maps
+.link https://github.com/quii/learn-go-with-tests/blob/master/dependency-injection.md Dependency Injection
+.image img/learn_go_with_tests.png  _ 150
+
+* Learn Go With Tests Chapters:
+.link https://github.com/quii/learn-go-with-tests/blob/master/mocking.md Mocking
+.link https://github.com/quii/learn-go-with-tests/blob/master/concurrency.md Concurrency
+.link https://github.com/quii/learn-go-with-tests/blob/master/select.md Select
+.link https://github.com/quii/learn-go-with-tests/blob/master/reflection.md Reflection
+.link https://github.com/quii/learn-go-with-tests/blob/master/sync.md Sync
+.link https://github.com/quii/learn-go-with-tests/blob/master/context.md Context
+.link https://github.com/quii/learn-go-with-tests/blob/master/roman-numerals.md Intro to property based tests via Roman Numerals
+.link https://github.com/quii/learn-go-with-tests/blob/master/math.md Maths
+.image img/learn_go_with_tests.png  _ 150
+
+
+
+* Gophercises
+.image img/gophercises_logo.png  _ 400
+.link  https://gophercises.com Free Course Website
+.link https://github.com/gophercises Github Code Repo
+
+* Gophercises Challenges
+.link https://github.com/gophercises/quiz Quiz Game (channels goroutines flags)
+.link https://github.com/gophercises/urlshort URL Shortener (http middlewares)
+.link https://github.com/gophercises/cyoa Choose Your Own Adventure (html handlers, templates)
+.link https://github.com/gophercises/link HTML Link Parser (parsing html, recursion)
+.link https://github.com/gophercises/deck Deck of Cards (testing, sorting)
+.link https://github.com/gophercises/blackjack Blackjack (game state, loops)
+.link https://gophercises.com/exercises/quiet_hn Quiet HackerNews (concurrency)
+.link https://github.com/gophercises/secret Secrets CLI (crypto, interface chaining)
+.image img/gophercises_logo.png  _ 150
+
