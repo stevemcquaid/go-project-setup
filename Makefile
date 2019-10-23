@@ -5,6 +5,14 @@ TEST_OPTIONS?=
 .PHONY: build test
 .DEFAULT_GOAL := build
 
+## Build docker container
+docker-build:
+	@docker build --target final -t stevemcquaid/hello-go:latest .
+
+## Run docker container
+docker-build: docker-build
+	@docker run -it -p 5000:5000 stevemcquaid/hello-go:latest .
+
 ## Build the binary
 build:
 	@go build -o bin/app ./
