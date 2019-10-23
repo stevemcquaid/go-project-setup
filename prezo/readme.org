@@ -1,0 +1,12 @@
+* Go Project Setup Workshop
+Golang Indianapolis October 23, 2019
+
+* Abstract
+Let's walk thru the setup of a golang application & build something!
+
+* Present
+#+BEGIN_SRC text
+$ go get golang.org/x/tools/cmd/present
+$ present -notes
+> Open your web browser and visit http://localhost:3999
+#+END_SRC

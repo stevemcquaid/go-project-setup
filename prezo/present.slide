@@ -1,0 +1,27 @@
+Present Lightning Talk
+Golang Indianapolis Oct 23, 2019
+
+Steve McQuaid
+Senior Software Engineer, Salesforce
+steve@stevemcquaid.com
+https://github.com/stevemcquaid
+
+* About me
+: A little mind map about me and my background.
+: I work for Salesforce who has generously provided us the space and the food and the AV support.
+.image img/mind-map.png _ 800
+
+* Let's make a thing
+: This is meant to be a workshop so lets bust out the laptops
+: Lets create 4 groups. And to mix everyone up, lets count off: 1,2,3,4
+    git clone https://github.com/stevemcquaid/go-project-setup.git
+.iframe https://github.com/stevemcquaid/go-project-setup _ 900
+.link https://godoc.org/golang.org/x/tools/present
+
+* Hello World
+: Lets write our first program
+.play -edit ../cmd/helloworld/helloworld.go
+
+* Webserver
+: Go has built-ins which make writing a webserver easy
+.play -edit ../cmd/simpleserver/simpleserver.go

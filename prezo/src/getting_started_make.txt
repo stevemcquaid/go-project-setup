@@ -1,0 +1,4 @@
+make help
+make clean
+make deps
+make build

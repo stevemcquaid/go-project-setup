@@ -1,0 +1,4 @@
+ls scripts/
+bash -x clean.sh
+bash -x deps.sh
+bash -x build.sh
