@@ -107,14 +107,6 @@ One way around this issue is to use a member function to call the struct's field
 .image img/learn_go_with_tests.png _ 400
 - Amazing repo full of challenges to learn the difference aspects of go through tests. Test Driven Learning? (TDD -> TDL)
 
-
-* Want to Build something? Gophercise!
-.image img/learn_go_with_tests.png _ 400
-- Guided exercises to build something cool
-- Free website with full video walkthrus
-- Solutions can be found in public repo branches
-- Jon Calhoun has a number of great paid courses... If interested, post on slack (we might be able to do a group discount)
-
 * Learn Go With Tests:
 .link https://quii.gitbook.io/learn-go-with-tests/ Full gitbook!
 Code: https://github.com/quii/learn-go-with-tests
@@ -145,10 +137,18 @@ Code: https://github.com/quii/learn-go-with-tests
 .image img/learn_go_with_tests.png  _ 150
 
 
+* Want to Build something? Gophercise!
+.image img/gophercises_logo.png _ 600
+- Guided exercises to build something cool
+- Free website with full video walkthrus
+- Solutions can be found in public repo branches
+- Jon Calhoun has a number of great paid courses... If interested, post on slack (we might be able to do a group discount)
+
+
 * Gophercises
-.image img/gophercises_logo.png  _ 400
 .link  https://gophercises.com Free Course Website
 .link https://github.com/gophercises Github Code Repo
+.image img/gophercises_logo.png  _ 400
 
 * Gophercises Challenges
 .link https://github.com/gophercises/quiz Quiz Game (channels goroutines flags)
