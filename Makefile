@@ -26,6 +26,7 @@ setup:
 	go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 	go get -u github.com/pierrre/gotestcover
 	go get -u golang.org/x/tools/cmd/cover
+	go get -u golang.org/x/tools/cmd/goimports
 	mkdir build
 
 ## Run all the tests
