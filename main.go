@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/stevemcquaid/goprojectsetup/pkg/configurableserver"
+	k8s_svc_list "github.com/stevemcquaid/goprojectsetup/pkg/k8s-svc-list"
 )
 
 func main() {
-	configurableserver.Run()
+	// configurableserver.Run()
+	k8s_svc_list.Run()
 }

@@ -7,7 +7,10 @@ import (
 
 func Run() {
 	http.HandleFunc("/", HelloHandler)
-	http.ListenAndServe("localhost:8080", nil)
+	err := http.ListenAndServe("localhost:8080", nil)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {

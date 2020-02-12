@@ -1,4 +1,4 @@
-package configuration
+package config
 
 type Configuration struct {
 	Server Server

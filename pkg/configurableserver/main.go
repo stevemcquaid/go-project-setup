@@ -3,14 +3,13 @@ package configurableserver
 import (
 	"sync"
 
-	configuration "github.com/stevemcquaid/goprojectsetup/config"
-	"github.com/stevemcquaid/goprojectsetup/pkg/config"
+	"github.com/stevemcquaid/goprojectsetup/config"
 	"github.com/stevemcquaid/goprojectsetup/pkg/logger"
 )
 
 func Run() {
 	// Get configuration
-	myConfiguration := &configuration.Configuration{}
+	myConfiguration := &config.Configuration{}
 	err := config.SetupConfig(myConfiguration)
 	if err != nil {
 		panic(err)

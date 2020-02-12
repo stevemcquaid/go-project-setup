@@ -6,14 +6,14 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	configuration "github.com/stevemcquaid/goprojectsetup/config"
+	"github.com/stevemcquaid/goprojectsetup/config"
 )
 
 type LogService struct {
 	log *logrus.Logger
 }
 
-func NewLogService(configuration *configuration.Configuration) *LogService {
+func NewLogService(configuration *config.Configuration) *LogService {
 	log := logrus.New()
 	log.Formatter = &logrus.TextFormatter{}
 
@@ -50,7 +50,7 @@ func (l *LogService) Handler(next http.Handler) http.Handler {
 	)
 }
 
-func NewTestLogService(configuration *configuration.Configuration) *LogService {
+func NewTestLogService(configuration *config.Configuration) *LogService {
 	ls := NewLogService(configuration)
 	ls.GetLogger().Level = logrus.DebugLevel
 	return ls
