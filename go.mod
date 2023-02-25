@@ -7,7 +7,7 @@ require (
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
 	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/viper v1.4.0
-	golang.org/x/sys v0.0.0-20191022100944-742c48ecaeb7 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 	k8s.io/api v0.17.3
 	sigs.k8s.io/controller-runtime v0.4.0
 )
